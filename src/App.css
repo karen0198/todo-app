@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+h1 {
+  color: rgb(23, 124, 255);
+}
+
+h1 span {
+  color: rgb(12, 60, 124);
+  text-transform: uppercase;
+}
+
+.TodoList {
+  width: 102%;
+  max-height: 540px;
+  height: auto;
+  overflow-y: auto;
+  padding-right: 2%;
+}
+
+.TodoList::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent; 
+  cursor: pointer;
+}
+
+.TodoList::-webkit-scrollbar-thumb {
+  background-color: rgb(125, 181, 255);
+  border-radius: 50px;
+}

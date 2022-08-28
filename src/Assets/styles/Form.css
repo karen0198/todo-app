@@ -1,0 +1,43 @@
+.Form * {
+    outline: none;
+    border: 1px solid rgb(23, 124, 255);
+}
+
+.Form {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.Form form  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    border: none;
+}
+
+.Form form input {
+    width: 75%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.Form form button {
+    width: 25%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    transition: all .2s ease-in;
+    background-color: rgb(23, 124, 255);
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: rgb(22, 102, 207);
+}

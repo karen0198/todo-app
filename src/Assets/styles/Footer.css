@@ -1,0 +1,36 @@
+.Footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 0 0 0 15px;
+    margin-bottom: 30px;
+}
+
+.completedInfo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    color: rgb(23, 124, 255);
+}
+
+.Footer button {
+    border: 5px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.btn.deleteAll {
+    background-color: #fff;
+    border: 1px solid rgb(23, 124, 255);
+    color: rgb(23, 124, 255);
+}
+
+.btn.deleteAll:hover {
+    background-color: rgb(22, 102, 207);
+    border: 1px solid rgb(22, 102, 207);
+    color: #fff;
+}

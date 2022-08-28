@@ -1,0 +1,151 @@
+.TodoItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all .2s ease-in;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 30px -18px rgba(0, 0, 0, 0);
+}
+
+.TodoItem.copy {
+    position: relative;
+    border: 1px solid rgb(255, 108, 23);
+}
+
+.TodoItem.copy::before {
+    content: 'Todo with the same name already exists';
+    position: absolute;
+    right: 60px;
+    top: 5px;
+    padding: 5px 10px;
+    z-index: 5;
+    border-radius: 5px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 30px -8px rgb(255, 108, 23);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.TodoItem.copy:hover::before {
+    content: 'Todo with the same name already exists';
+    position: absolute;
+    right: 60px;
+    top: -10px;
+    background: rgb(255, 108, 23);
+    padding: 5px 10px;
+    z-index: 5;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 1;
+    box-shadow: 0px 0px 30px -8px rgb(255, 108, 23);
+}
+
+.TodoItem:hover {
+    box-shadow: 0px 0px 30px -18px #000;
+    cursor: pointer;
+}
+
+.TodoItem.checked {
+    box-shadow: 0px 0px 30px -17px rgb(23, 124, 255);
+}
+
+.TodoItem.checked .todo-item__name {
+    color: rgb(23, 124, 255);
+}
+
+.copy.checked .todo-item__name {
+    color: rgb(255, 108, 23);
+}
+
+
+.TodoItem input {
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.deleteTodo {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: rgb(23, 124, 255);
+    z-index: 8;
+}
+
+.TodoItem.copy > .deleteTodo {
+    color: rgb(255, 108, 23);
+}
+
+.todo-item__name {
+    cursor: default;
+    margin-left: 10px;
+    text-transform: capitalize;
+    color: #333;
+    transition: all .2s ease-in-out;
+}
+
+.chechboxInput {
+    position: relative;
+    width: 0px;
+}
+
+.TodoItem.copy > .chechboxInput::before {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    margin-left: 5px;
+    transition: all .2s ease-in-out;
+    border: 2px solid rgb(255, 108, 23);
+    background-color: #fff;
+}
+
+.TodoItem.copy > .chechboxInput:checked::before {
+    border: 5px solid rgb(255, 191, 154) !important;
+    background-color: rgb(255, 108, 23) !important;
+    transition: all .2s ease-in-out;
+}
+
+.chechboxInput::before {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    margin-left: 5px;
+    transition: all .2s ease-in-out;
+    border: 2px solid rgb(23, 124, 255);
+    background-color: #fff;
+}
+
+.chechboxInput:checked::before {
+    border: 5px solid rgb(170, 207, 255);
+    background-color: rgb(23, 124, 255);
+    transition: all .2s ease-in-out;
+}
+
+.chechboxInput::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 40px;
+    margin-left: 5px;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
